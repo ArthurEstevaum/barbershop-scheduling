@@ -1,1 +1,11 @@
-<p>list-customers works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <app-customer-table
+        [customers]="customers"
+        (onConfirmDelete)="delete($event)"
+        (onRequestUpdate)="update($event)"
+      ></app-customer-table>
+    </div>
+  </div>
+</div>

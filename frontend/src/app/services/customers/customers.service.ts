@@ -25,8 +25,8 @@ export class CustomersService {
     return this.http.delete<void>(`${this.basePath}customers/${id}`)
   }
 
-  list() : Observable<ListCustomerResponse> {
-    return this.http.get<ListCustomerResponse>(`${this.basePath}customers`)
+  list() : Observable<ListCustomerResponse[]> {
+    return this.http.get<ListCustomerResponse[]>(`${this.basePath}customers`)
   }
 
   showById(id: number) : Observable<InfoCustomerResponse> {
