@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: barber_shop_postgres
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: barber_shop_db
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+volumes:
+  db_data:
+    driver: local
+networks:
+  app-network:
+    driver: bridge
