@@ -7,6 +7,6 @@ import java.time.OffsetDateTime;
 import java.util.List;
 
 public interface ScheduleRepository extends JpaRepository<Schedule, Long> {
-    List<Schedule> findByStartAtGreaterThanEqualAndEndAtLessThanEqualOrderByStartAtEndAt(OffsetDateTime startAt, OffsetDateTime endAt);
+    List<Schedule> findByStartAtGreaterThanEqualAndEndAtLessThanEqualOrderByStartAtAscEndAtAsc(OffsetDateTime startAt, OffsetDateTime endAt);
     boolean existsByStartAtAndEndAt(OffsetDateTime startAt, OffsetDateTime endAt);
 }

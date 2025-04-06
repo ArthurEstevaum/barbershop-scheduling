@@ -27,4 +27,9 @@ public class Schedule {
     @ManyToOne()
     @JoinColumn(name = "customer_id")
     private Customer customer;
+
+    public Schedule(OffsetDateTime endAt, OffsetDateTime startAt) {
+        this.endAt = endAt;
+        this.startAt = startAt;
+    }
 }

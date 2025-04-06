@@ -28,4 +28,10 @@ public class Customer {
 
     @OneToMany(mappedBy = "schedule")
     private Set<Schedule> schedules;
+
+    public Customer(String name, String email, String phoneNumber) {
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
 }
