@@ -26,7 +26,7 @@ public class Customer {
     @Column(nullable = false, unique = false)
     private String phoneNumber;
 
-    @OneToMany(mappedBy = "schedule")
+    @OneToMany(mappedBy = "customer")
     private Set<Schedule> schedules;
 
     public Customer(String name, String email, String phoneNumber) {
